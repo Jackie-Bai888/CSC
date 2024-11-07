@@ -1,6 +1,6 @@
 from http import HTTPStatus
 import dashscope
-dashscope.api_key = 'sk-6b0fb87804c14407be5c226bcaa7d7b6'
+dashscope.api_key = ''
 from dashscope import Generation
 from dashscope.api_entities.dashscope_response import Role
 
