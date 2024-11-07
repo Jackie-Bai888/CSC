@@ -9,13 +9,15 @@ This repository contains customized safety-critical scenarios generation framewo
 pip install -r requirements.txt
 ```
 ## Getting Started
-1. Get customized safety-critical scenarios using CSC method.
+1. Replace **dashscope.api_key** in the llm.py file in the llm folder with the key of your own Tongyi Qianwen API
+   
+2. Get customized safety-critical scenarios using CSC method.
    ```
    python main.py
    ```
 Note: You need to enter a description of the safety critical scenario in the input box. 
 
-2. Get customized safety-critical scenarios using Random method.
+3. Get customized safety-critical scenarios using Random method.
    ```
    python main_random.py
    ```
