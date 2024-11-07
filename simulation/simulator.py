@@ -179,3 +179,32 @@ def load_map(danger_info):
                                 return m
     return None
 
+if __name__ == '__main__':
+    client, world, carla_map = inital_carla()
+    danger_analysis_result = ['pedestrian', 'cross', 'front']
+    # danger_analysis_result = ['car', 'insert', 'right front']
+    # m = load_map(danger_analysis_result)
+    # _, pe_wp = get_walk_location(world, danger_analysis_result)
+    vehicle_list = world.get_actors().filter('vehicle.*')
+    ego_vehicle = vehicle_list[0]
+    # 获取当前车辆的位置
+    ego_location = ego_vehicle.get_location()
+    # 获取车辆当前所在的道路点
+    ego_waypoint = carla_map.get_waypoint(ego_location).next(10)[0]
+    lane_wp = ego_waypoint.get_right_lane()
+    ve_wp, pre_wp = get_walk_location(world, danger_analysis_result, 5)
+    # set_pedestrian(world, lane_wp.transform)
+    # reset_scene()
+    # reload_map(None, 'Town03')
+    # world, carla_map = inital_carla()
+    # ego_waypoint = get_ego_waypoint(world, carla_map)
+    # npc_ve = get_npc(world, ego_waypoint, 'front')
+    # set_autopilot(npc_ve)
+    # set_brake(npc_ve)
+    # behavior_function = globals()['set_brake']
+    # behavior_function(npc_ve)
+    # generate_npc(world, carla_map, ego_waypoint)
+    # add_water(world, carla_map, ego_waypoint)
+    # add_ice(carla_map, ego_waypoint)
+    # set_weather(world)
+    # set_road(world, carla_map)
