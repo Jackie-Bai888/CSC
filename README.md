@@ -14,6 +14,7 @@ pip install -r requirements.txt
    python main.py
    ```
 Note: You need to enter a description of the safety critical scenario in the input box. 
+
 2. Get customized safety-critical scenarios using Random method.
    ```
    python main_random.py
